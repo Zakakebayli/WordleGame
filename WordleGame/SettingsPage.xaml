@@ -1,0 +1,9 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WordleGame.SettingsPage">
+    <StackLayout Padding="20">
+        <Label Text="Settings" FontSize="24" HorizontalOptions="Center" />
+        <Switch x:Name="DarkModeSwitch" />
+        <Label Text="Enable Dark Mode" HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

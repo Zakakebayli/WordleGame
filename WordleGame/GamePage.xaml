@@ -1,0 +1,47 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WordleGame.GamePage"
+             BackgroundColor="#FFFFFF">
+
+    <VerticalStackLayout Padding="30" Spacing="20">
+        <Label Text="🟩 Wordle Game" 
+               FontSize="32" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center"
+               TextColor="#4A90E2" />
+
+        <Label Text="Guess the word in 6 tries. Each guess must be a valid 5-letter word." 
+               FontSize="16" 
+               HorizontalOptions="Center"
+               TextColor="#333"
+               Margin="0,0,0,20" 
+               HorizontalTextAlignment="Center" />
+
+        <Grid x:Name="WordGrid" VerticalOptions="Start" HorizontalOptions="Center">
+            <!-- Dynamically populated with guesses -->
+        </Grid>
+
+        <HorizontalStackLayout Spacing="10" VerticalOptions="End">
+            <Entry x:Name="GuessInput" 
+                   Placeholder="Enter your guess..." 
+                   MaxLength="5" 
+                   FontSize="20"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="#E8F0FE"
+                   TextColor="#000"
+                   PlaceholderColor="#888"
+                   Margin="0,10"
+                   VerticalOptions="Center" />
+
+            <Button Text="✔" 
+                    Clicked="OnSubmitGuessClicked"
+                    FontSize="20"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="20"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    VerticalOptions="Center" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

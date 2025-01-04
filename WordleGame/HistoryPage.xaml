@@ -1,0 +1,45 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WordleGame.HistoryPage"
+             BackgroundColor="#F5F5F5">
+
+    <VerticalStackLayout Padding="30" Spacing="20">
+   
+        <Label Text="📜 Game History" 
+               FontSize="32" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center"
+               TextColor="#4A90E2" />
+
+        <Label Text="Review your past games and performance!" 
+               FontSize="16" 
+               HorizontalOptions="Center"
+               TextColor="#333"
+               Margin="0,0,0,10" />
+
+        <!-- History List -->
+        <CollectionView x:Name="HistoryList" 
+                        SelectionMode="None" 
+                        Margin="0,10">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="5" 
+                           BackgroundColor="White" 
+                           BorderColor="LightGray" 
+                           CornerRadius="10">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding GameResult}" 
+                                   FontSize="18" 
+                                   TextColor="Black" 
+                                   FontAttributes="Bold" />
+                            <Label Text="{Binding DatePlayed}" 
+                                   FontSize="14" 
+                                   TextColor="Gray" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
