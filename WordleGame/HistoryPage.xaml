@@ -3,36 +3,42 @@
              x:Class="WordleGame.HistoryPage"
              BackgroundColor="#F5F5F5">
 
+    <!-- Main container for the page -->
     <VerticalStackLayout Padding="30" Spacing="20">
-   
+
+        <!-- Page title -->
         <Label Text="📜 Game History" 
                FontSize="32" 
                FontAttributes="Bold" 
                HorizontalOptions="Center"
                TextColor="#4A90E2" />
 
+        <!-- Subheading text -->
         <Label Text="Review your past games and performance!" 
                FontSize="16" 
                HorizontalOptions="Center"
                TextColor="#333"
                Margin="0,0,0,10" />
 
-        <!-- History List -->
+        <!-- List of past games -->
         <CollectionView x:Name="HistoryList" 
                         SelectionMode="None" 
                         Margin="0,10">
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
+                    <!-- A styled container for each game history item -->
                     <Frame Padding="10" Margin="5" 
                            BackgroundColor="White" 
                            BorderColor="LightGray" 
                            CornerRadius="10">
                         <VerticalStackLayout>
+                            <!-- Displays the game result -->
                             <Label Text="{Binding GameResult}" 
                                    FontSize="18" 
                                    TextColor="Black" 
                                    FontAttributes="Bold" />
+                            <!-- Displays the date the game was played -->
                             <Label Text="{Binding DatePlayed}" 
                                    FontSize="14" 
                                    TextColor="Gray" />
