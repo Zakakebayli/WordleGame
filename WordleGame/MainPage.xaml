@@ -3,14 +3,17 @@
              x:Class="WordleGame.MainPage"
              BackgroundColor="#F5F5F5">
 
+    <!-- Main layout for stacking content -->
     <VerticalStackLayout Padding="30" VerticalOptions="Center" Spacing="20">
 
+        <!-- Title of the app -->
         <Label Text="🎯 Welcome to Wordle Game!" 
                FontSize="32" 
                FontAttributes="Bold" 
                HorizontalOptions="Center"
                TextColor="#4A90E2" />
 
+        <!-- Short description of the game -->
         <Label Text="Guess the word in 6 tries. Are you ready to challenge your mind?" 
                FontSize="18" 
                HorizontalOptions="Center"
@@ -18,6 +21,7 @@
                Margin="0,10" 
                HorizontalTextAlignment="Center" />
 
+        <!-- Button to start the game -->
         <Button Text="Start Game" 
                 Clicked="OnStartGameClicked" 
                 FontAttributes="Bold" 
@@ -27,6 +31,7 @@
                 CornerRadius="20"
                 Padding="10" />
 
+        <!-- Button to view game history -->
         <Button Text="View History" 
                 Clicked="OnViewHistoryClicked" 
                 FontAttributes="Bold" 
@@ -36,6 +41,7 @@
                 CornerRadius="20"
                 Padding="10" />
 
+        <!-- text -->
         <Label Text="🧠 Powered by Wordle" 
                FontSize="14" 
                HorizontalOptions="Center"
